@@ -36,14 +36,14 @@ class TestCaseType extends AbstractType
             ])
         ;
 
-        $builder->addEventListener(FormEvents::PRE_SUBMIT, function (FormEvent $event) {
-            $data = $event->getData();
-
-            if (!empty($data['owner'])) {
-                $form = $event->getForm();
-                $this->addPet($form, $data['owner']);
-            }
-        });
+//        $builder->addEventListener(FormEvents::PRE_SUBMIT, function (FormEvent $event) {
+//            $data = $event->getData();
+//
+//            if (!empty($data['owner'])) {
+//                $form = $event->getForm();
+//                $this->addPet($form, $data['owner']);
+//            }
+//        });
 
         $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
             $dto = $event->getData();
